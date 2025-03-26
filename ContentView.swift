@@ -13,10 +13,17 @@ struct ContentView: View {
             HStack{
                 NavigationLink(destination: Policies()) {
                     VStack {
-                        Image(systemName: "document.on.clipboard")
-                            .imageScale(.large)
-                            .foregroundStyle(.tint)
-                        Text("Policies")
+                        NavigationLink(destination: Policies()) {
+                                VStack {
+                                    Image(systemName: "document.on.clipboard")
+                                        .padding()
+                                    Text("Policies")
+                                }
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                            }
                     }
                     .padding()
                 }
@@ -31,29 +38,36 @@ struct Policies: View{
         NavigationView{
             HStack{
                 NavigationLink(destination: UniformPolicy()) {
-                    VStack {
-                        Image(systemName: "tshirt")
-                            .imageScale(.large)
-                            .foregroundStyle(.tint)
-                        Text("Uniform")
-                    }
-                    .padding()
-                }
+                            VStack {
+                                Image(systemName: "tshirt")
+                                    .padding()
+                                Text("Uniform")
+                                }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        }
+                .padding()
+                
                 NavigationLink(destination: TechPolicy()) {
-                    VStack {
-                        Image(systemName: "laptopcomputer")
-                            .imageScale(.large)
-                            .foregroundStyle(.tint)
-                        
-                        Text("Technology")
-                    }
+                            VStack {
+                                Image(systemName: "laptopcomputer").padding()
+                                Text("Technology")
+                                }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        }
                     .padding()
                 }
+                
             }
-            Spacer()
         }
     }
-}
+
+
 
 struct UniformPolicy: View {
     var body: some View {
