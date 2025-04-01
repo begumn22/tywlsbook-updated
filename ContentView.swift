@@ -73,20 +73,7 @@ struct UniformPolicy: View {
     var body: some View {
         NavigationView{
             HStack{
-                VStack {
-                Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello")
-                }
-                .padding()
-                VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello,e!")
-                }
-                .padding()
+                Text("Hi!")
             }
             Spacer()
         }
@@ -97,20 +84,7 @@ struct TechPolicy: View {
     var body: some View {
         NavigationView{
             HStack{
-                VStack {
-                   Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hola")
-                }
-                .padding()
-                VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Bonjour")
-                }
-                .padding()
+                Text("Hello!")
             }
             Spacer()
         }
