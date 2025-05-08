@@ -29,6 +29,15 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .cornerRadius(8)
                 }
+                VStack {
+                  Image(systemName: "document.on.clipboard")
+                        .padding()
+                  Text("Forum")
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
             }
         }
     }
@@ -39,23 +48,33 @@ struct Policies: View{
         NavigationView{
             HStack{
                 NavigationLink(destination: UniformPolicy()) {
-                            VStack {
-                                Image(systemName: "tshirt")
-                                    .padding()
-                                Text("Uniform")
-                                }
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                        }
+                    VStack {
+                        Image(systemName: "tshirt")
+                            .padding()
+                        Text("Uniform")
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                }
                 .padding()
                 
                 
                 NavigationLink(destination: TechPolicy()) {
+                    VStack {
+                        Image(systemName: "laptopcomputer").padding()
+                        Text("Tech")
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                }
+                NavigationLink(destination: BathroomPolicy()) {
                             VStack {
-                                Image(systemName: "laptopcomputer").padding()
-                                Text("Technology")
+                                Image(systemName: "toilet").padding()
+                                Text("Bathroom")
                                 }
                         .padding()
                         .background(Color.blue)
@@ -63,8 +82,9 @@ struct Policies: View{
                         .cornerRadius(8)
                         }
                     .padding()
-                }
-                
+            }
+            
+            
             }
         }
     }
@@ -109,9 +129,18 @@ struct TechPolicy: View {
                     Text("TYWLS Astoria’s expectations and school technology policy is as follows:").bold().italic()
                     Text("1. \(Text("Laptops (& any technology-assigned equipment) \(Text("MUST ONLY be used for school or academic use").underline())").bold()) both in school and at home. Students cannot use their school laptops for social media, YouTube, watching movies, Google Hangout etc. If a student is found to be misusing this privilege, consequences can vary depending on the nature of misuse (see below).").padding()
                     Text("2. Students are responsible to keep the laptops clean and to keep liquids away from it at all times, as they have signed the contract accepting that responsibility. Students are expected to take care of the laptop, and keep track of it at all times. Students are \(Text("NOT allowed to loan or give their laptops to other students or siblings.").italic().underline()) For example, if a student asks another student to use their laptop, this is absolutely NOT allowed.").padding()
+                    Text("\(Text("All students must purchase a cover").bold()) for the laptop in order to avoid damage to it in the event that it falls or someone hits it. Having a computer cover is \(Text("MANDATORY").underline()). If the student is in financial need, please contact the guidance counselor, and be prepared to bring proof of low income.").padding()
+                    Text("Below please find the recommended laptop covers:")
+                    Text("- If you have the new mac laptop, below is the case we recommend you all to buy: http://tinyurl.com/yxgjrerq")
+                    Text("- If you have the older mac laptop, below is the case we recommend you all to buy: http://tinyurl.com/y2z4lase")
+                    Text("- If you have a MacBook Air, below is the case we recommend: http://tinyurl.com/y4q6hqc6")
+                    Text("3. If a student damages the laptop (keys missing, broken or cracked screens, bent laptops, water or any liquid damage etc.) for which [they have] signed a contract, that student will be responsible for the cost of the replacement and/or for the repair of the  laptop. For example, the most common issues are broken screens, if a student cracks or breaks the screen, it will cost $506. If families are unable to pay for broken laptops, the school will work out:")
                 }
                 Button("Contact Us") {
                     openEmailClient()
+                }
+                NavigationLink(destination: PolicySummary()){
+                    
                 }
                 .padding()
                 .background(Color.blue)
@@ -120,6 +149,50 @@ struct TechPolicy: View {
                 
             }
             Spacer()
+        }
+    }
+}
+
+struct BathroomPolicy: View{
+    var body: some View {
+        NavigationView{
+            ScrollView{
+                VStack{
+                    Text("Bathroom Policy").font(.largeTitle)
+                    //insert image of chart here
+                    Text("Updates + Expectations:").bold().padding()
+                    Text("\(Text("Trust Building Approach").italic())-We are starting the year with a trust building approach. Do the right thing when no one is looking– ”integrity”")
+                    Text("Provisional based on patterns of student safety behaviors—If we have patterns of egregious incidents in the school bathrooms, we will return to monitored supervision of each bathroom by period with a sign in and out method and school aide supervision. Examples include but are not limited to: Damaging of property, drug use, filming/inappropriate media use, etc.)").padding()
+                    Text("Bathroom Use").bold()
+                    Text("No bathroom access first 5 mins and last 5 mins of each period. No access during transition times.").padding()
+                    Text("For emergencies during either transition or first 5 mins, last 5 mins - please come to the main office, and a school aide will open the cafe bathroom.").padding()
+                    Text("Afterschool programming: second floor only open for students and third floor for Girls Inc participants.").padding()
+                    Text("Students \(Text("must use the sign-in log from classrooms").bold()). Students should not exit room without signing out (even if teacher is distracted).").padding()
+                    Text("Students must carry \(Text("laminated ROOM PASS").bold()) while out of room.").padding()
+                    Text("Only one student at a time is permitted out of class at once.").padding()
+                    Text("No cell phones/laptops are permitted in bathrooms, photos or other indiscretions").padding()
+                    Text("No group converging. Students may be asked to line up and wait if student numbers are in excess in the bathroom.").padding()
+                    Text("No smoking/vaping/drug use is permitted on any school premises including bathrooms. Disciplinary action will be taken if students are found to be participating in illicit actions.").padding()
+                    Text("*All of the above is subject to change based on need, patterns and determination by the School Safety Team.").italic().padding()
+                    Button("Contact Us") {
+                        openEmailClient()
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                }
+            }
+        }
+    }
+}
+
+struct PolicySummary: View{
+    var body: some View{
+        NavigationView{
+        ScrollView{
+                
+            }
         }
     }
 }
@@ -135,5 +208,5 @@ func openEmailClient() {
         }
     }
 #Preview {
-    ContentView()
+    Policies()
 }
