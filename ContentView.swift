@@ -97,11 +97,11 @@ struct UniformPolicy: View {
             ScrollView{
                 VStack{
                     Text("Uniform Policy").font(.largeTitle)
-                    Text("Standard uniform includes white shirt (usually a polo shirt), and solid gray/navy bottoms (may be pants or skirt). Gym uniforms may replace tops with navy blue shirts. Bottoms cannot be jeans or leggings.  Shoes may not be open-toed and only sneakers can be worn on gym days. Sweaters may be worn over tops, but preferably should be navy blue and not cover the uniform. All tops (including alternate choices like tunics or abayas) must have the TYWLS logo imprinted or must have a patch or pin with the TYWLS logo. TYWLS shirts belonging to sports teams, the drama club, senior shirts, etc. are also allowed. School appropriate personal clothes are allowed during birthdays (verified by card sign-in).").padding()
-                    
-                    NavigationLink(destination: UniformFull()){
-                        Text("Read Full Policy")
-                    }
+                    Text("Standard uniform includes white shirt (usually a polo shirt), and solid gray/navy bottoms (may be pants or skirt). Gym uniforms may replace tops with navy blue shirts. Bottoms cannot be jeans or leggings.  Shoes may not be open-toed and only sneakers can be worn on gym days. Sweaters may be worn over tops, but should be navy blue and not cover the uniform. Personal sweatshirts are not allowed. All tops (including alternate choices like tunics or abayas) must have the TYWLS logo imprinted or must have a patch or pin with the TYWLS logo. TYWLS shirts belonging to sports teams, the drama club, senior shirts, etc. are also allowed.").padding()
+                    Text("School appropriate personal clothes are allowed during birthdays (verified by card sign-in), Spirit Days (as long as your outfit match the theme, and in certain cases, you have the appropriate wristlet indicating you have been given permission to wear a non-uniform outfit), and through the TYWLS Advisory Cup’s Dress Down Day prize.")
+                    // NavigationLink(destination: UniformFull()){
+                    //     Text("Read Full Policy")
+                    // }
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
@@ -126,10 +126,13 @@ struct TechPolicy: View{
         NavigationView{
         ScrollView{
             Text("Tech Policy").font(.largeTitle)
-            Text("Personal devices such as laptops or tablets may be used for schoolwork--cellphones are not allowed in school and must be turned in during entry every morning. School mandated devices such as laptops or tablets are to be used only for educational purposes and are subject to restrictions and revision by staff. If broken, students may have to pay to repair the device. Cases are recommended in order to protect the device. All school mandated devices must be returned every end of the year, and must be returned to school in good condition. It is not allowed for students to create unofficial accounts on social media using the school’s name. If students are discovered doing this, they will be subject to disciplinary measures depending on the severity of the offense.").padding()
-            NavigationLink(destination: TechFull()){
-                Text("Read Full Policy")
-            }
+            Text("Any devices that have access to WiFi (and subsequently, the Internet) are banned from the premises under Chancellor’s Regulation A-413. This includes, but aren’t limited to: personal laptops/tablets, phones, iPod touch & other similar mp3 players, and smart watches. Devices that use BlueTooth connection are also banned. This includes Bluetooth earbuds such as AirPods.
+").padding()
+            Text("Students in grades 6-11 are no longer given laptops for schoolwork. However, they will have access to technology in their SEP and Digital Media classes. Teachers can also sign out a Chromebook cart for usage during a class period.")
+            Text("12th graders may use laptops, but they must be school-issued and have a plastic case covering the laptop. tech@tywls-astoria.org will email students individually telling them what laptop they’ll be getting so cases can be purchased accordingly. Students who cannot afford a case must fill out a Google form stating that they need the school to purchase a case for them.")
+            // NavigationLink(destination: TechFull()){
+            //     Text("Read Full Policy")
+            // }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
@@ -144,10 +147,10 @@ struct BathroomPolicy: View{
         NavigationView{
         ScrollView{
             Text("Bathroom Policy").font(.title)
-            Text("When using the restroom, students must first sign-out on the bathroom sheet in their classroom before exiting. They may not take any technology with them and may be asked to leave with a bathroom pass. Only one student may use the restroom at a time per classroom. Students may not use the restroom to smoke or engage in any similar activity. Bathrooms are locked during the first and last 5 minutes of each period--in emergency situations, the cafeteria bathroom may be used with the permission of a school aide. If there are too many students in the bathroom at the same time, students may have to line up outside.").padding()
-            NavigationLink(destination: BathroomFull()){
-                Text("Read Full Policy")
-            }
+            Text("When using the restroom, students must first create a SmartPass before exiting. They may not take any technology with them and may be asked to leave with a physical bathroom pass. Only one student may use the restroom at a time per classroom. Students may not use the restroom to smoke or engage in any similar activity. Bathrooms are locked during the first and last 5 minutes of each period--in emergency situations, the cafeteria bathroom may be used with the permission of a school aide. If there are too many students in the bathroom at the same time, students may have to line up outside.").padding()
+            // NavigationLink(destination: BathroomFull()){
+            //     Text("Read Full Policy")
+            // }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
@@ -155,6 +158,18 @@ struct BathroomPolicy: View{
             }
         }
     }
+}
+
+struct AdvisoryCup: View{
+	var body: some View{
+		NavigationView{
+		ScrollView{
+			Text("The TYWLS Advisory Cup is a competition between advisories. Advisories must win points for their advisories in order to win prizes each month.")
+			Text("Students earn a point based on three things: uniform, timeliness, and [one more thing I completely forgot]. Teachers can also hand out points, having 3 points they can donate per week to students they deem worthy. Such students either participate actively, work hard, or demonstrate persistence.")
+			Text("Each month, winners are selected per grade and are announced on the loudspeaker. Depending on the month, the winners either have the most points or showed the most improvement (showed a significant increase in points compared to before) since September.")
+			}
+		}
+	}
 }
 
 struct UniformFull: View {
