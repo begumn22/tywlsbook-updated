@@ -126,8 +126,7 @@ struct TechPolicy: View{
         NavigationView{
         ScrollView{
             Text("Tech Policy").font(.largeTitle)
-            Text("Any devices that have access to WiFi (and subsequently, the Internet) are banned from the premises under Chancellor’s Regulation A-413. This includes, but aren’t limited to: personal laptops/tablets, phones, iPod touch & other similar mp3 players, and smart watches. Devices that use BlueTooth connection are also banned. This includes Bluetooth earbuds such as AirPods.
-").padding()
+            Text("Any devices that have access to WiFi (and subsequently, the Internet) are banned from the premises under Chancellor’s Regulation A-413. This includes, but aren’t limited to: personal laptops/tablets, phones, iPod touch & other similar mp3 players, and smart watches. Devices that use BlueTooth connection are also banned. This includes Bluetooth earbuds such as AirPods.").padding()
             Text("Students in grades 6-11 are no longer given laptops for schoolwork. However, they will have access to technology in their SEP and Digital Media classes. Teachers can also sign out a Chromebook cart for usage during a class period.")
             Text("12th graders may use laptops, but they must be school-issued and have a plastic case covering the laptop. tech@tywls-astoria.org will email students individually telling them what laptop they’ll be getting so cases can be purchased accordingly. Students who cannot afford a case must fill out a Google form stating that they need the school to purchase a case for them.")
             // NavigationLink(destination: TechFull()){
